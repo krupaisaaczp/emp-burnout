@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Burnout Survey</title>
+</head>
+<body>
+    <h1>Employee Burnout Survey</h1>
+    <form action="{{ url_for('survey') }}" method="POST">
+        <label for="workload">Workload (1-10):</label>
+        <input type="number" id="workload" name="workload" min="1" max="10" required><br><br>
+
+        <label for="job_satisfaction">Job Satisfaction (1-10):</label>
+        <input type="number" id="job_satisfaction" name="job_satisfaction" min="1" max="10" required><br><br>
+
+        <label for="stress_levels">Stress Levels (1-10):</label>
+        <input type="number" id="stress_levels" name="stress_levels" min="1" max="10" required><br><br>
+
+        <label for="work_life_balance">Work-Life Balance (1-10):</label>
+        <input type="number" id="work_life_balance" name="work_life_balance" min="1" max="10" required><br><br>
+
+        <label for="comments">Comments:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
